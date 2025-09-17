@@ -54,12 +54,8 @@ def processar_codigo(grade, codigo, nome):
 # --- INTERFACE WEB COM STREAMLIT ---
 
 st.set_page_config(layout="wide") # Deixa a página mais larga
-st.title("📅Tradutor de Horários UFPB")
+st.title("📅Meu horário")
 
-#Logo da UFPB:
-
-st.title("Exemplo com Imagem Local")
-st.image("c:/Users/micro/Downloads/download-removebg-preview (2).png")
 
 # Inicializa o estado da sessão para guardar a lista de matérias
 if 'materias' not in st.session_state:
@@ -110,4 +106,5 @@ if st.session_state.materias:
         st.write(f"- **{materia['nome']}**: `{materia['codigo']}`")
 
 else:
+
     st.info("Adicione uma matéria para começar a montar sua grade.")
